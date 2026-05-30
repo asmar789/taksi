@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Silopi Taksi | Silopi Taksici – Mehmet Kırboğa</title>
+<meta name="description" content="Silopi taksi hizmeti. Silopi taksici Mehmet Kırboğa ile güvenli ve hızlı ulaşım. 7/24 Silopi taksi, şehir içi ve şehirler arası taşımacılık."/>
+<meta name="keywords" content="Silopi taksi, Silopi taksici, Silopi taksi durağı, Silopi ulaşım, Silopi şoför, taksi Silopi, Mehmet Kırboğa taksi"/>
+<meta name="robots" content="index, follow"/>
+<meta name="author" content="Mehmet Kırboğa"/>
+<link rel="canonical" href="https://silopitaksi.com/"/>
+
+<!-- Open Graph -->
+<meta property="og:title" content="Silopi Taksi | Silopi Taksici – Mehmet Kırboğa"/>
+<meta property="og:description" content="Silopi taksi hizmeti. Güvenli ve hızlı ulaşım için Silopi taksici Mehmet Kırboğa."/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="tr_TR"/>
+
+<!-- Structured Data: Local Business -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TaxiService",
+  "name": "Silopi Taksi – Mehmet Kırboğa",
+  "description": "Silopi taksi ve taksici hizmeti. Şehir içi ve şehirler arası güvenli ulaşım.",
+  "areaServed": {
+    "@type": "City",
+    "name": "Silopi",
+    "containedInPlace": {
+      "@type": "State",
+      "name": "Şırnak"
+    }
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Silopi",
+    "addressRegion": "Şırnak",
+    "addressCountry": "TR"
+  },
+  "url": "https://silopitaksi.com/",
+  "priceRange": "₺",
+  "openingHours": "Mo-Su 00:00-24:00"
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--y:#F5C100;--yg:#FFD84D;--g:#25D366;--dark:#080808;--border:rgba(255,255,255,.08)}
+html,body{height:100%;font-family:'Outfit',sans-serif;background:var(--dark);color:#fff;overflow-x:hidden}
+
+/* CANVAS */
+#bgc{position:fixed;inset:0;z-index:1;pointer-events:none;mix-blend-mode:screen;opacity:0.4}
+
+/* GRAIN */
+body::after{content:'';position:fixed;inset:0;z-index:1;pointer-events:none;
+background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+opacity:.5;mix-blend-mode:overlay}
+
+/* LAYOUT */
+.page{position:relative;z-index:2;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 20px 110px;text-align:center}
+
+/* BADGE */
+.badge{display:inline-flex;align-items:center;gap:7px;background:rgba(245,193,0,.1);border:1px solid rgba(245,193,0,.22);border-radius:50px;padding:6px 18px;font-size:.68rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--y);margin-bottom:22px;animation:up .6s ease both}
+
+/* TITLE */
+.title{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,13vw,7rem);line-height:.92;letter-spacing:.02em;background:linear-gradient(145deg,#ffffff 25%,var(--y) 75%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 50px rgba(245,193,0,.25));animation:up .7s ease .08s both}
+.title span{display:block;font-size:clamp(1.7rem,7.5vw,4.2rem);opacity:.9}
+
+.sub{font-size:clamp(.72rem,3vw,.88rem);font-weight:300;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:10px;animation:up .75s ease .16s both}
+
+/* DIVIDER */
+.div{width:48px;height:2px;background:linear-gradient(90deg,transparent,var(--y),transparent);margin:26px auto;animation:up .8s ease .22s both}
+
+/* HERO BG */
+.hero-bg{position:fixed;inset:0;z-index:0;background-size:cover;background-position:center;background-repeat:no-repeat}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.52) 0%,rgba(0,0,0,.70) 55%,rgba(8,8,8,1) 100%)}
+  50%{rx:60;opacity:.25}
+}
+
+/* STATUS */
+.sc{background:rgba(15,15,15,.88);border:1px solid var(--border);border-radius:20px;padding:18px 26px;min-width:min(280px,82vw);display:flex;align-items:center;gap:15px;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);position:relative;overflow:hidden;animation:up .85s ease .28s both;transition:border-color .4s}
+.sc::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 15% 50%,rgba(245,193,0,.05),transparent 55%);pointer-events:none}
+.dot{width:15px;height:15px;border-radius:50%;flex-shrink:0;position:relative}
+.dot::after{content:'';position:absolute;inset:-5px;border-radius:50%;background:inherit;opacity:.25;animation:rip 2s ease-in-out infinite}
+@keyframes rip{0%,100%{transform:scale(1);opacity:.25}50%{transform:scale(1.8);opacity:0}}
+.sl{font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;opacity:.45;margin-bottom:4px}
+.sd{font-size:.92rem;font-weight:600;text-align:left}
+
+/* CTAs */
+.ctas{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:26px;animation:up .9s ease .35s both}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:14px 28px;border-radius:50px;border:none;font-family:'Outfit',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;text-decoration:none;transition:transform .18s,box-shadow .18s,filter .18s;-webkit-tap-highlight-color:transparent;position:relative;overflow:hidden}
+.btn:active{transform:scale(.94)}
+.btn-c{background:linear-gradient(135deg,var(--y),var(--yg));color:#000;box-shadow:0 5px 26px rgba(245,193,0,.38)}
+.btn-c:hover{box-shadow:0 7px 38px rgba(245,193,0,.58);filter:brightness(1.08)}
+.btn-w{background:linear-gradient(135deg,#1da851,var(--g));color:#fff;box-shadow:0 5px 26px rgba(37,211,102,.28)}
+.btn-w:hover{box-shadow:0 7px 38px rgba(37,211,102,.48);filter:brightness(1.08)}
+.btn svg{width:17px;height:17px;flex-shrink:0}
+
+/* CHIPS */
+.chips{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:36px;animation:up 1s ease .42s both}
+.chip{display:flex;align-items:center;gap:7px;background:rgba(255,255,255,.035);border:1px solid var(--border);border-radius:50px;padding:8px 16px;font-size:.72rem;font-weight:500;opacity:.65}
+.chip em{font-style:normal;font-size:.95rem}
+
+/* GEAR */
+.gear{position:fixed;bottom:13px;right:13px;z-index:50;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.045);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:13px;transition:all .2s;color:rgba(255,255,255,.18);-webkit-tap-highlight-color:transparent}
+.gear:hover{background:rgba(255,255,255,.07);color:rgba(255,255,255,.45)}
+
+/* OVERLAY */
+.ov{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:center;padding:14px;opacity:0;pointer-events:none;transition:opacity .25s}
+.ov.open{opacity:1;pointer-events:all}
+
+/* LOGIN */
+.lb{background:#0e0e0e;border:1px solid rgba(255,255,255,.1);border-radius:26px;padding:44px 30px;width:100%;max-width:350px;display:flex;flex-direction:column;align-items:center;gap:17px;transform:translateY(22px) scale(.97);opacity:0;transition:transform .28s,opacity .28s}
+.ov.open .lb{transform:translateY(0) scale(1);opacity:1}
+.lico{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,rgba(245,193,0,.18),rgba(245,193,0,.04));border:1px solid rgba(245,193,0,.22);display:flex;align-items:center;justify-content:center;font-size:24px}
+.lb h2{font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:.08em}
+.lb p{font-size:.76rem;opacity:.42;text-align:center;margin-top:-10px}
+.fld{width:100%;display:flex;flex-direction:column;gap:5px}
+.fld label{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.55}
+.fld input{background:#1b1b1b;border:1px solid rgba(255,255,255,.09);border-radius:12px;padding:13px 15px;color:#fff;font-family:'Outfit',sans-serif;font-size:.88rem;outline:none;transition:border-color .2s,box-shadow .2s}
+.fld input:focus{border-color:var(--y);box-shadow:0 0 0 3px rgba(245,193,0,.1)}
+.err{font-size:.74rem;color:#ff6b6b;display:none;text-align:center}
+.err.on{display:block}
+.bsign{width:100%;background:linear-gradient(135deg,var(--y),var(--yg));color:#000;padding:14px;border-radius:50px;border:none;font-family:'Outfit',sans-serif;font-size:.83rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:filter .2s,transform .15s;box-shadow:0 4px 22px rgba(245,193,0,.28);margin-top:4px}
+.bsign:hover{filter:brightness(1.1)}
+.bsign:active{transform:scale(.97)}
+
+/* PANEL */
+.pn{background:#0e0e0e;border:1px solid rgba(255,255,255,.1);border-radius:26px;padding:28px 24px;width:100%;max-width:400px;display:none;flex-direction:column;gap:17px;transform:translateY(22px) scale(.97);opacity:0;transition:transform .28s,opacity .28s}
+.pn.vis{display:flex}
+.ov.open .pn.vis{transform:translateY(0) scale(1);opacity:1}
+.ph{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.ph h2{font-family:'Bebas Neue',sans-serif;font-size:1.85rem;letter-spacing:.07em;line-height:1}
+.ph p{font-size:.7rem;opacity:.4;margin-top:3px}
+.bout{display:flex;align-items:center;gap:5px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:8px 13px;color:#fff;font-family:'Outfit',sans-serif;font-size:.7rem;font-weight:600;cursor:pointer;transition:background .2s;white-space:nowrap}
+.bout:hover{background:rgba(255,255,255,.12)}
+.cb{background:#090909;border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:15px 19px}
+.cb .cl{font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.4;margin-bottom:4px}
+.cb .cv{font-family:'Bebas Neue',sans-serif;font-size:1.85rem;letter-spacing:.07em}
+.ok{background:rgba(37,200,100,.1);border:1px solid rgba(37,200,100,.22);border-radius:12px;padding:11px 15px;font-size:.78rem;font-weight:600;color:#5fdd9d;text-align:center;display:none}
+.ok.on{display:block}
+.sbts{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.sbt{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:17px 7px;border-radius:16px;border:2px solid transparent;cursor:pointer;transition:transform .15s,border-color .2s,box-shadow .2s;position:relative;-webkit-tap-highlight-color:transparent}
+.sbt:active{transform:scale(.92)}
+.sbt.on{border-color:var(--y);box-shadow:0 0 0 2px rgba(245,193,0,.13)}
+.sdot{position:absolute;top:8px;right:8px;width:7px;height:7px;border-radius:50%;background:var(--y);display:none}
+.sbt.on .sdot{display:block}
+.sico{font-size:1.6rem}
+.st{font-family:'Bebas Neue',sans-serif;font-size:.95rem;letter-spacing:.06em}
+.sd2{font-size:.58rem;opacity:.55;text-align:center;line-height:1.3}
+.sm{background:#152b1c}.sm.on{background:#1c3d27}
+.sd3{background:#2d1515}.sd3.on{background:#3d1c1c}
+.sk{background:#1d1d1d}.sk.on{background:#292929}
+.ib{background:#090909;border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:13px 15px;font-size:.71rem;line-height:1.65;opacity:.55}
+.ib strong{color:var(--y)}
+
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:340px){.sbts{grid-template-columns:1fr}.title{font-size:2.6rem}}
+
+/* ── ABOUT SECTION ── */
+.about{position:relative;z-index:2;width:100%;max-width:520px;margin:0 auto;padding:0 20px 90px}
+
+.sec-label{font-size:.65rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--y);opacity:.8;text-align:center;margin-bottom:10px}
+.sec-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,8vw,3.2rem);letter-spacing:.04em;text-align:center;line-height:1;margin-bottom:6px}
+.sec-sub{font-size:.8rem;font-weight:300;color:rgba(255,255,255,.45);text-align:center;letter-spacing:.06em;margin-bottom:32px}
+
+/* Intro card */
+.intro-card{background:rgba(15,15,15,.9);border:1px solid var(--border);border-radius:20px;padding:26px 24px;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);position:relative;overflow:hidden;margin-bottom:16px}
+.intro-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--y),transparent)}
+.intro-card p{font-size:.88rem;line-height:1.8;color:rgba(255,255,255,.75);font-weight:300}
+.intro-card p strong{color:#fff;font-weight:700}
+.intro-card p .hl{color:var(--y);font-weight:600}
+
+/* Feature grid */
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+.feat{background:rgba(15,15,15,.85);border:1px solid var(--border);border-radius:16px;padding:20px 16px;display:flex;flex-direction:column;gap:8px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:border-color .25s,transform .2s}
+.feat:hover{border-color:rgba(245,193,0,.25);transform:translateY(-2px)}
+.feat-ico{font-size:1.6rem;line-height:1}
+.feat-t{font-size:.82rem;font-weight:700;color:#fff}
+.feat-d{font-size:.72rem;color:rgba(255,255,255,.45);line-height:1.55;font-weight:300}
+
+/* Stats row */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
+.stat{background:rgba(245,193,0,.06);border:1px solid rgba(245,193,0,.14);border-radius:16px;padding:18px 10px;text-align:center}
+.stat-n{font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:.04em;color:var(--y);line-height:1}
+.stat-l{font-size:.62rem;font-weight:500;color:rgba(255,255,255,.45);margin-top:3px;letter-spacing:.08em}
+
+/* Quote card */
+.quote-card{background:rgba(245,193,0,.05);border:1px solid rgba(245,193,0,.15);border-radius:20px;padding:24px 22px;position:relative;overflow:hidden}
+.quote-card::after{content:'"';position:absolute;right:16px;bottom:-10px;font-family:'Bebas Neue',sans-serif;font-size:8rem;color:rgba(245,193,0,.08);line-height:1;pointer-events:none}
+.quote-card p{font-size:.85rem;line-height:1.8;color:rgba(255,255,255,.7);font-weight:300;font-style:italic;position:relative;z-index:1}
+.quote-card .qname{margin-top:14px;font-size:.72rem;font-weight:700;color:var(--y);letter-spacing:.1em}
+
+/* Divider line */
+.sdiv{width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.07),transparent);margin:8px 0 24px}
+
+/* ── GALLERY SECTION ── */
+.gallery-section{position:relative;z-index:2;width:100%;max-width:520px;margin:0 auto;padding:0 20px 60px}
+.gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.gallery-item{background:rgba(15,15,15,.9);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:border-color .25s,transform .2s}
+.gallery-item:hover{border-color:rgba(245,193,0,.3);transform:translateY(-2px)}
+.gallery-item.full-width{grid-column:1/-1}
+.gallery-img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.gallery-item.full-width .gallery-img{aspect-ratio:16/7}
+.gallery-caption{padding:10px 13px 12px;font-size:.74rem;color:rgba(255,255,255,.6);line-height:1.5;font-weight:300}
+.gallery-caption:empty{display:none}
+.gallery-empty{grid-column:1/-1;text-align:center;padding:40px 20px;background:rgba(15,15,15,.7);border:1px dashed rgba(255,255,255,.1);border-radius:16px;font-size:.8rem;color:rgba(255,255,255,.3)}
+
+/* ── ADMIN PANEL PHOTO ── */
+.pn{max-width:480px!important}
+.photo-section{display:flex;flex-direction:column;gap:10px}
+.photo-section .ps-label{font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.4;margin-bottom:2px}
+.upload-area{background:#090909;border:1.5px dashed rgba(245,193,0,.25);border-radius:14px;padding:22px 16px;text-align:center;cursor:pointer;transition:border-color .2s,background .2s;position:relative}
+.upload-area:hover{border-color:rgba(245,193,0,.5);background:rgba(245,193,0,.03)}
+.upload-area input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.upload-ico{font-size:1.8rem;margin-bottom:6px}
+.upload-txt{font-size:.72rem;color:rgba(255,255,255,.45);line-height:1.5}
+.upload-txt span{color:var(--y);font-weight:600}
+.preview-wrap{position:relative;display:none}
+.preview-wrap.show{display:block}
+.preview-wrap img{width:100%;border-radius:12px;max-height:200px;object-fit:cover;display:block}
+.preview-remove{position:absolute;top:8px;right:8px;background:rgba(0,0,0,.7);border:none;border-radius:50%;width:26px;height:26px;color:#fff;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.preview-remove:hover{background:rgba(255,80,80,.8)}
+.caption-field{background:#1b1b1b;border:1px solid rgba(255,255,255,.09);border-radius:12px;padding:11px 13px;color:#fff;font-family:'Outfit',sans-serif;font-size:.82rem;outline:none;resize:none;min-height:64px;transition:border-color .2s,box-shadow .2s;width:100%}
+.caption-field:focus{border-color:var(--y);box-shadow:0 0 0 3px rgba(245,193,0,.1)}
+.caption-field::placeholder{opacity:.35}
+.photo-list{display:flex;flex-direction:column;gap:8px;max-height:220px;overflow-y:auto}
+.photo-list::-webkit-scrollbar{width:4px}.photo-list::-webkit-scrollbar-track{background:transparent}.photo-list::-webkit-scrollbar-thumb{background:rgba(255,255,255,.1);border-radius:2px}
+.photo-row{display:flex;align-items:center;gap:10px;background:#0d0d0d;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:8px 10px}
+.photo-thumb{width:46px;height:36px;object-fit:cover;border-radius:7px;flex-shrink:0}
+.photo-cap{font-size:.72rem;color:rgba(255,255,255,.55);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.photo-del{background:none;border:none;color:rgba(255,80,80,.6);cursor:pointer;font-size:16px;padding:0 4px;transition:color .2s;flex-shrink:0}
+.photo-del:hover{color:#ff4444}
+.no-photos{font-size:.72rem;color:rgba(255,255,255,.25);text-align:center;padding:12px}
+.badd{width:100%;background:linear-gradient(135deg,var(--y),var(--yg));color:#000;padding:12px;border-radius:50px;border:none;font-family:'Outfit',sans-serif;font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:filter .2s,transform .15s;box-shadow:0 4px 18px rgba(245,193,0,.25)}
+.badd:hover{filter:brightness(1.1)}.badd:active{transform:scale(.97)}
+.badd:disabled{opacity:.45;cursor:not-allowed;filter:none}
+.pok{background:rgba(37,200,100,.1);border:1px solid rgba(37,200,100,.22);border-radius:12px;padding:10px 14px;font-size:.76rem;font-weight:600;color:#5fdd9d;text-align:center;display:none}
+.pok.on{display:block}
+.perr{background:rgba(255,80,80,.08);border:1px solid rgba(255,80,80,.2);border-radius:12px;padding:10px 14px;font-size:.76rem;font-weight:600;color:#ff8080;text-align:center;display:none}
+.perr.on{display:block}
+
+</style>
+</head>
+<body>
+<canvas id="bgc"></canvas>
+<div class="hero-bg" id="heroBg"></div>
+
+<main class="page">
+  <div class="badge">📍 Silopi, Şırnak</div>
+  <h1 class="title">Silopi Taksi<span>Mehmet Kırboğa</span></h1>
+  <p class="sub">Silopi Taksici · Hızlı &amp; Güvenli Ulaşım</p>
+
+  <div class="div"></div>
+
+  <div class="sc" id="mCard">
+    <div class="dot" id="mDot"></div>
+    <div>
+      <div class="sl" id="mLabel">Durum</div>
+      <div class="sd" id="mDesc">Yükleniyor…</div>
+    </div>
+  </div>
+
+  <div class="ctas">
+    <a href="tel:+905459230760" class="btn btn-c">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      Bizi Ara
+    </a>
+    <a href="https://wa.me/905459230760" target="_blank" class="btn btn-w">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+
+  <div class="chips">
+    <div class="chip"><em>🕐</em> 7/24 Hizmet</div>
+    <div class="chip"><em>🚗</em> Silopi &amp; Çevresi</div>
+    <div class="chip"><em>⚡</em> Anında Ulaşım</div>
+  </div>
+</main>
+
+<!-- ══ ABOUT SECTION ══ -->
+<section class="about">
+  <div class="sdiv"></div>
+  <p class="sec-label">Hakkımızda</p>
+  <h2 class="sec-title">Silopi'nin Güvenilir Taksisi</h2>
+  <p class="sec-sub">Yıllarca süren deneyim, binlerce mutlu yolcu</p>
+
+  <div class="intro-card">
+    <p>
+      <strong>Mehmet Kırboğa Taksi</strong> olarak <span class="hl">Silopi ve çevresi</span>nde yıllardır güvenli, konforlu ve zamanında ulaşım hizmeti sunuyoruz. Her yolcuya saygılı, her yolculuğa özenli yaklaşımımızla bölgenin en çok tercih edilen taksi hizmetiyiz.<br><br>
+      Gece gündüz, her koşulda yanınızdayız. Şehir içi, şehirlerarası veya havalimanı transferi fark etmez — <span class="hl">güvenle binebileceğiniz</span> bir şoför, <span class="hl">temiz ve bakımlı</span> bir araç her zaman hazır.
+    </p>
+  </div>
+
+  <div class="feat-grid">
+    <div class="feat"><span class="feat-ico">🕐</span><span class="feat-t">7/24 Hizmet</span><span class="feat-d">Gece yarısı da olsa, sabahın köründe de — her an ulaşabilirsiniz</span></div>
+    <div class="feat"><span class="feat-ico">🛡️</span><span class="feat-t">Güvenli Sürüş</span><span class="feat-d">Trafiğe hakim, tecrübeli şoför ile huzurlu yolculuk</span></div>
+    <div class="feat"><span class="feat-ico">✨</span><span class="feat-t">Temiz Araç</span><span class="feat-d">Her seferinde bakımlı, temiz ve konforlu araç garantisi</span></div>
+    <div class="feat"><span class="feat-ico">📍</span><span class="feat-t">Geniş Bölge</span><span class="feat-d">Silopi merkez, köyler ve şehirlerarası her noktaya ulaşım</span></div>
+    <div class="feat"><span class="feat-ico">💛</span><span class="feat-t">Dürüst Fiyat</span><span class="feat-d">Sürpriz ek ücret yok, söylenen fiyat ödenen fiyattır</span></div>
+    <div class="feat"><span class="feat-ico">⚡</span><span class="feat-t">Hızlı Yanıt</span><span class="feat-d">Aradığınızda veya mesaj attığınızda anında dönüş</span></div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="stat-n">10+</div><div class="stat-l">Yıl Deneyim</div></div>
+    <div class="stat"><div class="stat-n">7/24</div><div class="stat-l">Aktif Hizmet</div></div>
+    <div class="stat"><div class="stat-n">100%</div><div class="stat-l">Müşteri Memnuniyeti</div></div>
+  </div>
+
+  <div class="quote-card">
+    <p>"Silopi'de bir yerden bir yere gidecekseniz, aklınıza gelecek ilk isim olmak istiyoruz. Sadece taksi değil, güvendiğiniz bir yol arkadaşı oluyoruz."</p>
+    <div class="qname">— Mehmet Kırboğa</div>
+  </div>
+</section>
+
+<!-- ══ GALLERY SECTION ══ -->
+<section class="gallery-section" id="gallerySection">
+  <div class="sdiv"></div>
+  <p class="sec-label">Galeri</p>
+  <h2 class="sec-title" style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,8vw,3.2rem);letter-spacing:.04em;text-align:center;line-height:1;margin-bottom:6px">Fotoğraflar</h2>
+  <p class="sec-sub" style="font-size:.8rem;font-weight:300;color:rgba(255,255,255,.45);text-align:center;letter-spacing:.06em;margin-bottom:28px">Hizmetlerimizden kareler</p>
+  <div class="gallery-grid" id="galleryGrid">
+    <div class="gallery-empty" id="galleryEmpty">Henüz fotoğraf eklenmemiş.</div>
+  </div>
+</section>
+
+<button class="gear" id="adminGear">⚙️</button>
+
+<div class="ov" id="ov">
+  <!-- LOGIN -->
+  <div class="lb" id="lb">
+    <div class="lico">🔒</div>
+    <h2>Admin Girişi</h2>
+    <p>Taksi durumunu yönetmek için giriş yapın</p>
+    <div class="fld"><label>E-posta</label><input type="email" id="ui" placeholder="admin@taksi.com" autocomplete="off"/></div>
+    <div class="fld"><label>Şifre</label><input type="password" id="pi" placeholder="••••••"/></div>
+    <div class="err" id="er">Kullanıcı adı veya şifre hatalı.</div>
+    <button class="bsign" id="lbtn">→ Giriş Yap</button>
+  </div>
+
+  <!-- PANEL -->
+  <div class="pn" id="pn" style="overflow-y:auto;max-height:92svh">
+    <div class="ph">
+      <div><h2>Admin Paneli</h2><p>Taksi durumunu yönetin</p></div>
+      <button class="bout" id="lout">↪ Çıkış</button>
+    </div>
+
+    <!-- DURUM -->
+    <div class="cb"><div class="cl">Mevcut Durum</div><div class="cv" id="cv">MÜSAİT</div></div>
+    <div class="ok" id="okb">✓ Durum başarıyla güncellendi!</div>
+    <div class="sbts">
+      <button class="sbt sm" data-s="musait"><div class="sdot"></div><span class="sico">✅</span><span class="st">MÜSAİT</span><span class="sd2">Taksi şu an<br>hizmet veriyor</span></button>
+      <button class="sbt sd3" data-s="dolu"><div class="sdot"></div><span class="sico">❌</span><span class="st">DOLU</span><span class="sd2">Taksi şu an<br>meşgul</span></button>
+      <button class="sbt sk" data-s="kapali"><div class="sdot"></div><span class="sico">⚠️</span><span class="st">KAPALI</span><span class="sd2">Taksi hizmet<br>dışı</span></button>
+    </div>
+
+    <!-- ARKA PLAN FOTOĞRAFI -->
+    <div style="width:100%;height:1px;background:rgba(255,255,255,.07);margin:4px 0"></div>
+    <div class="photo-section">
+      <div class="ps-label">🖼️ Hero Arka Plan Görseli</div>
+      <div class="upload-area" id="bgUploadArea">
+        <input type="file" id="bgPhotoInput" accept="image/*"/>
+        <div class="upload-ico">🌄</div>
+        <div class="upload-txt">Arka plan fotoğrafı seçin<br><span>JPG, PNG, WEBP</span> desteklenir</div>
+      </div>
+      <div class="preview-wrap" id="bgPreviewWrap">
+        <img id="bgPreviewImg" src="" alt="Önizleme"/>
+        <button class="preview-remove" id="bgPreviewRemove">✕</button>
+      </div>
+      <button class="badd" id="bgUploadBtn" disabled>📤 Arka Planı Kaydet</button>
+      <div class="pok" id="bgOk">✓ Arka plan güncellendi!</div>
+      <div class="perr" id="bgErr">⚠️ Hata oluştu, tekrar deneyin.</div>
+    </div>
+
+    <!-- FOTOĞRAF EKLE -->
+    <div style="width:100%;height:1px;background:rgba(255,255,255,.07);margin:4px 0"></div>
+    <div class="photo-section">
+      <div class="ps-label">📸 Fotoğraf Ekle</div>
+
+      <!-- Upload alanı -->
+      <div class="upload-area" id="uploadArea">
+        <input type="file" id="photoInput" accept="image/*"/>
+        <div class="upload-ico">🖼️</div>
+        <div class="upload-txt">Fotoğraf seçmek için tıklayın<br><span>JPG, PNG, WEBP</span> desteklenir</div>
+      </div>
+
+      <!-- Önizleme -->
+      <div class="preview-wrap" id="previewWrap">
+        <img id="previewImg" src="" alt="Önizleme"/>
+        <button class="preview-remove" id="previewRemove">✕</button>
+      </div>
+
+      <!-- Açıklama -->
+      <textarea class="caption-field" id="captionInput" placeholder="Açıklama ekle (isteğe bağlı)…" rows="2"></textarea>
+
+      <button class="badd" id="addPhotoBtn" disabled>📤 Fotoğraf Ekle</button>
+      <div class="pok" id="photoOk">✓ Fotoğraf başarıyla eklendi!</div>
+      <div class="perr" id="photoErr">⚠️ Hata oluştu, tekrar deneyin.</div>
+    </div>
+
+    <!-- MEVCUT FOTOĞRAFLAR -->
+    <div class="photo-section">
+      <div class="ps-label">🗂️ Mevcut Fotoğraflar</div>
+      <div class="photo-list" id="photoList">
+        <div class="no-photos" id="noPhotos">Henüz fotoğraf yok.</div>
+      </div>
+    </div>
+
+    <div class="ib"><strong>Bilgi:</strong> Durum değişikliği ve fotoğraflar anında sitede güncellenir.</div>
+  </div>
+</div>
+
+<!-- Firebase SDK -->
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getDatabase, ref, set, push, remove, onValue } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+import { getAuth, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+// ── CANVAS BG ──
+const cv=document.getElementById('bgc'),cx=cv.getContext('2d');
+let W,H,pts=[],gx,gy,gvx=.28,gvy=.14;
+function rsz(){W=cv.width=innerWidth;H=cv.height=innerHeight;gx=W*.68;gy=H*.5}
+addEventListener('resize',rsz);rsz();
+function mkPts(){
+  pts=[];
+  const n=Math.min(Math.floor(W*H/6500),100);
+  for(let i=0;i<n;i++) pts.push(Math.random()>.35?
+    {t:'s',x:Math.random()*W,y:Math.random()*H,len:18+Math.random()*55,spd:1.4+Math.random()*2.8,a:.04+Math.random()*.16,w:.4+Math.random()*1.4}:
+    {t:'b',x:Math.random()*W,y:Math.random()*H,r:18+Math.random()*55,a:.05+Math.random()*.15,ph:Math.random()*6.28,spd:.12+Math.random()*.18});
+}
+mkPts();addEventListener('resize',mkPts);
+function drw(){
+  cx.clearRect(0,0,W,H);
+  const bg=cx.createLinearGradient(0,0,W,H);
+  bg.addColorStop(0,'#060406');bg.addColorStop(1,'#0e0700');
+  cx.fillStyle=bg;cx.fillRect(0,0,W,H);
+  gx+=gvx;gy+=gvy;
+  if(gx>W*.88||gx<W*.12)gvx*=-1;if(gy>H*.78||gy<H*.22)gvy*=-1;
+  const gr=cx.createRadialGradient(gx,gy,0,gx,gy,Math.min(W,H)*.5);
+  gr.addColorStop(0,'rgba(245,193,0,.075)');gr.addColorStop(1,'transparent');
+  cx.fillStyle=gr;cx.fillRect(0,0,W,H);
+  pts.forEach(p=>{
+    if(p.t==='s'){
+      cx.save();cx.strokeStyle=`rgba(245,193,0,${p.a})`;cx.lineWidth=p.w;
+      cx.beginPath();cx.moveTo(p.x,p.y);cx.lineTo(p.x-p.len*.18,p.y+p.len);cx.stroke();cx.restore();
+      p.y+=p.spd;p.x-=p.spd*.18;if(p.y>H+p.len){p.y=-p.len;p.x=Math.random()*W}
+    }else{
+      p.ph+=.018;const a=p.a*(.65+.35*Math.sin(p.ph));
+      const rg=cx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r);
+      rg.addColorStop(0,`rgba(245,193,0,${a})`);rg.addColorStop(1,'transparent');
+      cx.fillStyle=rg;cx.fillRect(p.x-p.r,p.y-p.r,p.r*2,p.r*2);
+      p.y-=p.spd;if(p.y<-p.r){p.y=H+p.r;p.x=Math.random()*W}
+    }
+  });
+  requestAnimationFrame(drw);
+}
+drw();
+
+// ── FIREBASE ──
+const firebaseConfig = {
+  apiKey: "AIzaSyAUSgZdq21OnGC7YXM8qVBmCYZ-TY7GSGg",
+  authDomain: "taksss-71f5d.firebaseapp.com",
+  projectId: "taksss-71f5d",
+  storageBucket: "taksss-71f5d.firebasestorage.app",
+  messagingSenderId: "85970842520",
+  appId: "1:85970842520:web:9251a9be4e7c35ad3b31ed",
+  measurementId: "G-3GHELXSDBR",
+  databaseURL: "https://taksss-71f5d-default-rtdb.firebaseio.com"
+};
+const app  = initializeApp(firebaseConfig);
+const db   = getDatabase(app);
+const auth = getAuth(app);
+const statusRef = ref(db, 'taksi/durum');
+const photosRef = ref(db, 'taksi/fotolar');
+
+// ── STATUS MAP ──
+const SM={
+  musait:{l:'MÜSAİT',d:'Şu an müsaitiz, hemen arayabilirsiniz!',dot:'#4ade80'},
+  dolu:  {l:'DOLU',  d:'Şu an doluyuz, lütfen bekleyin',         dot:'#f87171'},
+  kapali:{l:'KAPALI',d:'Şu an hizmet dışıyız',                   dot:'#9ca3af'}
+};
+
+function rMain(s){
+  const m=SM[s]||SM.musait;
+  document.getElementById('mDot').style.background=m.dot;
+  document.getElementById('mDot').style.color=m.dot;
+  document.getElementById('mLabel').textContent=m.l;
+  document.getElementById('mDesc').textContent=m.d;
+}
+function rPanel(s){
+  document.getElementById('cv').textContent=(SM[s]||SM.musait).l;
+  document.querySelectorAll('.sbt').forEach(b=>b.classList.toggle('on',b.dataset.s===s));
+}
+
+// ── REALTIME LISTENER — durum ──
+let currentStatus = 'musait';
+onValue(statusRef, snap => {
+  const s = snap.val() || 'musait';
+  currentStatus = s;
+  rMain(s);
+  if(document.getElementById('pn').classList.contains('vis')) rPanel(s);
+});
+
+// ── REALTIME LISTENER — fotoğraflar ──
+let photosData = {};
+onValue(photosRef, snap => {
+  photosData = snap.val() || {};
+  renderGallery(photosData);
+  if(document.getElementById('pn').classList.contains('vis')) renderPhotoList(photosData);
+});
+
+// ── GALLERY RENDER (ana sayfa) ──
+function renderGallery(data){
+  const grid = document.getElementById('galleryGrid');
+  const empty = document.getElementById('galleryEmpty');
+  const entries = Object.entries(data);
+  // Zaman sırasına göre sırala (yeniden eskiye)
+  entries.sort((a,b) => (b[1].ts||0) - (a[1].ts||0));
+
+  if(entries.length === 0){
+    grid.innerHTML = '<div class="gallery-empty" id="galleryEmpty">Henüz fotoğraf eklenmemiş.</div>';
+    return;
+  }
+
+  grid.innerHTML = '';
+  entries.forEach(([key, photo], i) => {
+    const item = document.createElement('div');
+    // İlk fotoğraf tam genişlik
+    item.className = 'gallery-item' + (i === 0 ? ' full-width' : '');
+    item.innerHTML = `<img class="gallery-img" src="${photo.url}" alt="${photo.caption||'Taksi fotoğrafı'}" loading="lazy"/>
+      ${photo.caption ? `<div class="gallery-caption">${photo.caption}</div>` : ''}`;
+    grid.appendChild(item);
+  });
+}
+
+// ── PHOTO LIST RENDER (admin panel) ──
+function renderPhotoList(data){
+  const list = document.getElementById('photoList');
+  const entries = Object.entries(data);
+  entries.sort((a,b) => (b[1].ts||0) - (a[1].ts||0));
+
+  if(entries.length === 0){
+    list.innerHTML = '<div class="no-photos" id="noPhotos">Henüz fotoğraf yok.</div>';
+    return;
+  }
+
+  list.innerHTML = '';
+  entries.forEach(([key, photo]) => {
+    const row = document.createElement('div');
+    row.className = 'photo-row';
+    row.innerHTML = `<img class="photo-thumb" src="${photo.url}" alt=""/>
+      <span class="photo-cap">${photo.caption || '(Açıklama yok)'}</span>
+      <button class="photo-del" data-key="${key}" title="Sil">🗑</button>`;
+    list.appendChild(row);
+  });
+
+  list.querySelectorAll('.photo-del').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      if(!confirm('Bu fotoğrafı silmek istediğinize emin misiniz?')) return;
+      const k = btn.dataset.key;
+      await remove(ref(db, `taksi/fotolar/${k}`));
+    });
+  });
+}
+
+// ── OPEN/CLOSE ──
+document.getElementById('adminGear').addEventListener('click',()=>{
+  document.getElementById('ov').classList.add('open');
+  document.getElementById('lb').style.display='flex';
+  document.getElementById('pn').classList.remove('vis');
+  document.getElementById('ui').value='';document.getElementById('pi').value='';
+  document.getElementById('er').classList.remove('on');
+  document.getElementById('okb').classList.remove('on');
+});
+function closeOv(){
+  document.getElementById('ov').classList.remove('open');
+  signOut(auth);
+  resetPhotoForm();
+}
+document.getElementById('ov').addEventListener('click',e=>{if(e.target===document.getElementById('ov'))closeOv()});
+document.getElementById('lout').addEventListener('click',closeOv);
+
+// ── LOGIN ──
+async function login(){
+  const u=document.getElementById('ui').value.trim();
+  const p=document.getElementById('pi').value;
+  try {
+    await signInWithEmailAndPassword(auth, u, p);
+    document.getElementById('lb').style.display='none';
+    document.getElementById('pn').classList.add('vis');
+    rPanel(currentStatus);
+    renderPhotoList(photosData);
+  } catch(e) {
+    document.getElementById('er').classList.add('on');
+    document.getElementById('pi').value='';
+  }
+}
+document.getElementById('lbtn').addEventListener('click',login);
+document.getElementById('pi').addEventListener('keydown',e=>{if(e.key==='Enter')login()});
+document.getElementById('ui').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('pi').focus()});
+
+// ── STATUS BTNS ──
+document.querySelectorAll('.sbt').forEach(b=>b.addEventListener('click',()=>{
+  const s=b.dataset.s;
+  set(statusRef, s);
+  const ok=document.getElementById('okb');ok.classList.add('on');
+  setTimeout(()=>ok.classList.remove('on'),2400);
+}));
+
+// ── PHOTO UPLOAD ──
+let selectedFile = null;
+
+document.getElementById('photoInput').addEventListener('change', e => {
+  const file = e.target.files[0];
+  if(!file) return;
+  selectedFile = file;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    document.getElementById('previewImg').src = ev.target.result;
+    document.getElementById('previewWrap').classList.add('show');
+    document.getElementById('uploadArea').style.display = 'none';
+    document.getElementById('addPhotoBtn').disabled = false;
+  };
+  reader.readAsDataURL(file);
+});
+
+document.getElementById('previewRemove').addEventListener('click', resetPhotoForm);
+
+function resetPhotoForm(){
+  selectedFile = null;
+  document.getElementById('photoInput').value = '';
+  document.getElementById('previewImg').src = '';
+  document.getElementById('previewWrap').classList.remove('show');
+  document.getElementById('uploadArea').style.display = '';
+  document.getElementById('captionInput').value = '';
+  document.getElementById('addPhotoBtn').disabled = true;
+  document.getElementById('photoOk').classList.remove('on');
+  document.getElementById('photoErr').classList.remove('on');
+}
+
+document.getElementById('addPhotoBtn').addEventListener('click', async () => {
+  if(!selectedFile) return;
+  const btn = document.getElementById('addPhotoBtn');
+  btn.disabled = true;
+  btn.textContent = '⏳ Yükleniyor…';
+  document.getElementById('photoOk').classList.remove('on');
+  document.getElementById('photoErr').classList.remove('on');
+
+  try {
+    // Resmi base64'e çevir ve sıkıştır
+    const base64 = await compressImage(selectedFile, 900, 0.82);
+    const caption = document.getElementById('captionInput').value.trim();
+
+    await push(photosRef, {
+      url: base64,
+      caption: caption,
+      ts: Date.now()
+    });
+
+    document.getElementById('photoOk').classList.add('on');
+    resetPhotoForm();
+    setTimeout(() => document.getElementById('photoOk').classList.remove('on'), 3000);
+  } catch(err) {
+    console.error(err);
+    document.getElementById('photoErr').classList.add('on');
+    btn.disabled = false;
+    btn.textContent = '📤 Fotoğraf Ekle';
+  }
+});
+
+
+// ── HERO BG ──
+const heroBgRef = ref(db, 'taksi/heroBg');
+
+onValue(heroBgRef, snap => {
+  const url = snap.val();
+  const el = document.getElementById('heroBg');
+  const canvasEl = document.getElementById('bgc');
+  if(url) {
+    el.style.backgroundImage = `url(${url})`;
+    canvasEl.style.opacity = '0.15';
+  } else {
+    el.style.backgroundImage = 'none';
+    canvasEl.style.opacity = '1';
+  }
+});
+
+// BG Upload
+let selectedBgFile = null;
+
+document.getElementById('bgPhotoInput').addEventListener('change', e => {
+  const file = e.target.files[0];
+  if(!file) return;
+  selectedBgFile = file;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    document.getElementById('bgPreviewImg').src = ev.target.result;
+    document.getElementById('bgPreviewWrap').classList.add('show');
+    document.getElementById('bgUploadArea').style.display = 'none';
+    document.getElementById('bgUploadBtn').disabled = false;
+  };
+  reader.readAsDataURL(file);
+});
+
+document.getElementById('bgPreviewRemove').addEventListener('click', () => {
+  selectedBgFile = null;
+  document.getElementById('bgPhotoInput').value = '';
+  document.getElementById('bgPreviewImg').src = '';
+  document.getElementById('bgPreviewWrap').classList.remove('show');
+  document.getElementById('bgUploadArea').style.display = '';
+  document.getElementById('bgUploadBtn').disabled = true;
+});
+
+document.getElementById('bgUploadBtn').addEventListener('click', async () => {
+  if(!selectedBgFile) return;
+  const btn = document.getElementById('bgUploadBtn');
+  btn.disabled = true;
+  btn.textContent = '⏳ Yükleniyor…';
+  document.getElementById('bgOk').classList.remove('on');
+  document.getElementById('bgErr').classList.remove('on');
+  try {
+    const base64 = await compressImage(selectedBgFile, 1400, 0.88);
+    await set(heroBgRef, base64);
+    document.getElementById('bgOk').classList.add('on');
+    document.getElementById('bgPreviewWrap').classList.remove('show');
+    document.getElementById('bgUploadArea').style.display = '';
+    selectedBgFile = null;
+    document.getElementById('bgPhotoInput').value = '';
+    btn.disabled = true;
+    btn.textContent = '📤 Arka Planı Kaydet';
+    setTimeout(() => document.getElementById('bgOk').classList.remove('on'), 3000);
+  } catch(err) {
+    console.error(err);
+    document.getElementById('bgErr').classList.add('on');
+    btn.disabled = false;
+    btn.textContent = '📤 Arka Planı Kaydet';
+  }
+});
+
+// ── IMAGE COMPRESSOR ──
+function compressImage(file, maxWidth, quality){
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    const url = URL.createObjectURL(file);
+    img.onload = () => {
+      URL.revokeObjectURL(url);
+      let w = img.width, h = img.height;
+      if(w > maxWidth){ h = Math.round(h * maxWidth / w); w = maxWidth; }
+      const canvas = document.createElement('canvas');
+      canvas.width = w; canvas.height = h;
+      canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+      resolve(canvas.toDataURL('image/jpeg', quality));
+    };
+    img.onerror = reject;
+    img.src = url;
+  });
+}
+</script>
+</body>
+</html>
